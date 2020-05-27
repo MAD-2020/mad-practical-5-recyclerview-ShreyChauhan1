@@ -71,6 +71,7 @@ public class TasksAdapter extends RecyclerView.Adapter<TaskViewHolder>{
                           @Override
                           public void onClick(DialogInterface dialog, int which) {
                               data.remove(position);
+                              notifyDataSetChanged();
                           }
                       });
               AlertDialog dialog=builder.create();
